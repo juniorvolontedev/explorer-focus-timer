@@ -1,5 +1,12 @@
 let play = document.querySelector(".play");
+let pause = document.querySelector(".pause");
 
-play.classList.add("hide");
+play.addEventListener("click", () => {
+  play.classList.add("hide");
+  pause.classList.remove("hide");
+});
 
-document.querySelector(".pause").classList.remove("hide");
+pause.addEventListener("click", () => {
+  play.classList.remove("hide");
+  pause.classList.add("hide");
+});
