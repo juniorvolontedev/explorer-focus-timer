@@ -1,5 +1,5 @@
-import resetControls from "./controls";
-import "./timer.js";
+import resetControls from "./controls.js";
+import { countdown, resetTimer } from "./timer.js";
 
 const buttonPlay = document.querySelector(".play");
 const buttonPause = document.querySelector(".pause");
@@ -18,7 +18,7 @@ buttonPlay.addEventListener("click", function () {
   buttonSet.classList.add("hide");
   buttonStop.classList.remove("hide");
 
-  countdown();
+  countdown(secondsDisplay, minutesDisplay, resetControls);
 });
 
 buttonPause.addEventListener("click", function () {
